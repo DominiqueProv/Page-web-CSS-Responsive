@@ -1,0 +1,537 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.header {
+  background-image: url(https://www.beststartcompton.org/wp-content/uploads/2019/02/39875853-header-wallpapers.jpg);
+  background-repeat: none;
+  background-size: cover;
+  padding: 150px 15% 100px;
+  position: relative;
+}
+
+.logo {
+  width: 200px;
+  z-index: 11;
+  position: fixed;
+  top: 12px;
+  left: 20px;
+}
+
+h1 {
+  font-size: 3em;
+  text-align: left;
+  padding: 20% 0 20% 0;
+  margin: 20px;
+}
+
+
+h3 {
+  padding: 40px;
+  font-size: 3rem;
+}
+
+
+.navigation {
+  list-style: none;
+  margin: 0;
+  background-color: rgba(31, 5, 5, 0.308);
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  padding: 20px 40px;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.navigation a:hover {
+  background: black;
+}
+
+/* .navbar {
+	overflow: hidden;
+	background-color: #333;
+  }
+  
+  .navbar a {
+	float: left;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+  } */
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 1em;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 20px 40px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  
+  .intro {
+
+    flex-direction: column;
+
+  }
+  
+  h1 {
+    text-align: left;
+    margin: 20px;
+    display: block;
+    padding: 40px 0;
+    }
+  
+ 
+  .info-intro {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px dotted white;
+    padding-top: 20px;
+  }
+
+  .info-intro-1{
+    padding-bottom: 30px;
+  }
+ 
+  .mainContent {
+    justify-content: space-around !important;
+    align-items: stretch !important;
+    height: 700px !important;
+    align-content: flex-start !important;
+    flex-wrap: wrap;
+    flex-direction: row;
+    }
+.info{
+  margin: 40px 0 0 0 !important;
+}
+
+}
+
+
+@media screen and (max-width: 700px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0px;
+  }
+
+.mainContent{
+  display: block !important;
+  margin: 0 auto;
+}
+
+.info{
+  margin: 30px auto !important;
+  margin-top: 30px;
+  width: 80% !important;
+}
+
+.cool-text {
+  
+  padding: 30px 0 ;
+  position: relative;
+  margin-top: 300px;;
+}
+.inset {
+  
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  
+}
+
+.row{
+  flex-direction: column;
+  height: 1000px !important;
+
+  /* flex: 1; */
+  
+}
+
+.navigation a{
+  display: none;
+}
+
+.dropbtn{
+  display: none;
+}
+
+h3 {
+  padding-top: 80px;
+  text-align: left !important;
+}
+
+.slick-gradient {
+  background-image: linear-gradient(to left, white, #339cf5) !important;
+
+}
+
+.slick-gradient p{
+  text-align: left !important;
+  padding-left: 40px;
+}
+
+}
+
+
+
+.intro {
+  border: 5px solid white;
+  justify-content: flex-start;
+  display: flex;
+}
+
+
+
+.right-intro {
+  background-color: rgba(31, 5, 5, 0.308);
+  padding: 30px 20px;
+  border-bottom: 1px dotted white;
+}
+
+.right-intro h2 {
+  font-size: 2em;
+  padding-bottom: 20px;
+}
+
+.info-intro {
+  display: flex;
+  border-top: 1px dotted white;
+  padding-top: 20px;
+}
+
+.btn-info {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 15px;
+  margin-top: 15px;
+  font-size: 12px;
+  background-color: dodgerblue;
+  transition: background-color 1s;
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: grey;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.info {
+  width: 400px;
+  margin: 0 15px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px #a1a1a1;
+}
+
+.mainContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  align-content: space-around;
+}
+
+.icon {
+  display: inline-block;
+  text-align: center;
+}
+
+.content-feature {
+  text-align: center;
+  padding: 20px 20px 0 20px;
+}
+
+.content-feature h3 {
+  color: black;
+  font-size: 20px;
+  padding: 0px;
+}
+
+.content-feature p {
+  padding-top: 30px;
+  color: black;
+}
+
+.btn-feature {
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-radius: 2px;
+  padding: 10px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  transition: background-color 1s;
+}
+
+.btn-feature:hover {
+  background-color: grey;
+  cursor: pointer;
+}
+
+.cool-text {
+  background-color: #383631;
+  padding: 30px 0 150px;
+  position: relative;
+}
+
+.cool-text p {
+  padding-left: 40px;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.inset {
+  background-color: #383631;
+  border: 10px solid white;
+  position: absolute;
+  width: 300px;
+  left: 40px;
+  bottom: -75px;
+  animation: pulse 2s infinite;
+}
+
+.inset h4 {
+  color: red;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.inset h5 {
+  text-align: center;
+  font-weight: 300;
+  padding-bottom: 40px;
+}
+
+.slick-gradient {
+  background-image: linear-gradient(to right, white, #339cf5);
+  padding: 30px 0 150px;
+}
+
+.slick-gradient h3 {
+  text-align: right;
+}
+
+.slick-gradient p {
+  text-align: right;
+  padding-right: 40px;
+}
+
+/* .grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ overflow: hidden;
+  } */
+
+/* .col{
+	display: inline-grid;
+	background-size: cover;
+	background-color: grey;
+	padding: 150px;
+  	font-size: 30px;
+	background-position: center;
+
+  } */
+
+/* col a {
+    display: none;
+    font-size: 35px;
+    color: #ffffff !important;
+    font-family: sans-serif;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    cursor: pointer;
+    text-decoration: none;
+} */
+
+.row {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  height: 300px;
+}
+
+.col-flex {
+  background-size: cover;
+  font-size: 30px;
+  background-position: center;
+  flex: 1;
+  transition: all 0.5s ease;
+}
+
+/* .col-flex:hover{
+	transform: scale(1.2);
+
+  } */
+
+.image-1 {
+  background-image: url(../assets/grid_02.jpg);
+}
+
+.image-2 {
+  background-image: url(../assets/grid_04.jpg);
+}
+
+.image-3 {
+  background-image: url(../assets/grid_06.jpg);
+}
+
+.image-4 {
+  background-image: url(../assets/grid_07.jpg);
+}
+
+.image-5 {
+  background-image: url(../assets/grid_08.jpg);
+}
+
+.image-6 {
+  background-image: url(../assets/grid_09.jpg);
+}
+
+.register {
+  margin: 0 auto;
+  width: 300px;
+  color: black;
+  padding: 60px 0;
+}
+
+.form {
+  text-align: left;
+}
+
+input[type="email"] {
+  padding: 7px 20px;
+  margin: 10px 0;
+  border: 2px solid black;
+}
+
+.btn-submit {
+  background: black;
+  color: white;
+  border: none;
+  height: 32px;
+  width: 100px;
+  padding: 0 0 0 -5;
+  text-shadow: none;
+}
+
+.btn-submit:hover {
+  background: grey;
+}
+
+.radio-btn {
+  margin-right: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 40px;
+  border-top: 1px dotted gray;
+  padding-top: 30px;
+}
+
+.footer-menu li {
+  color: black;
+  padding: 10px;
+  list-style-type: none;
+  font-size: 12px;
+}
+
+.footer-menu li:hover {
+  color: indigo;
+}
+
+
+
+
