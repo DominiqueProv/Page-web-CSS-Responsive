@@ -1,11 +1,17 @@
 .topnav {
     display:flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    flex-direction: row;
+	  flex-wrap: nowrap;
     overflow: hidden;
     background-color: #333;
     /* position: fixed; */
     /* width: 100%; */
     
+  }
+
+  .nav{
+
   }
   
   .topnav a {

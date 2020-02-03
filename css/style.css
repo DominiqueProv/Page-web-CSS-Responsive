@@ -24,12 +24,9 @@ body {
 }
 
 .logo {
-  /* display: block; */
   width: 175px;
-  z-index: 11;
-  position: fixed;
-  top: 12px;
-  left: 20px;
+  padding: 10px 0 0 10px;
+  
 }
 
 h1 {
