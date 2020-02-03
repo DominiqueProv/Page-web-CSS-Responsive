@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Page Html</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/nav.css" rel="stylesheet" type="text/css" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap"
       rel="stylesheet"
@@ -16,14 +17,44 @@
   </head>
 
   <body>
-    <div class="header" id="home">
-      <div class="logo">
-        <a href="#"
-          ><img src="assets/STAN02-Logo-09.svg" alt="logo stantors"
-        /></a>
+
+    <div class="logo">
+      <a href="#"
+        ><img src="assets/STAN02-Logo-09.svg" alt="logo stantors"
+      /></a>
       </div>
 
-      <div class="navigation">
+    <div class="topnav" id="myTopnav">
+
+      <a href="#home" class="active">Home</a>
+      
+      
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div> 
+      
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+
+    <div class="header" id="home">
+      
+
+
+      
+
+
+
+      <!-- <div class="navigation">
         <a href="#home">Home </a>
 
         <a href="#link1">Link 1</a>
@@ -31,7 +62,6 @@
         <div class="dropdown">
           <button class="dropbtn">
             Link 3&nbsp;&nbsp;
-            <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
             <a href="#link3">Link 1</a>
@@ -39,7 +69,7 @@
             <a href="#link5">Link 3</a>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="intro">
         <div class="left-intro">
@@ -117,25 +147,25 @@
       <p>Lorem ipsum dolor sit amet.</p>
     </div>
 
-    <!-- <div class="grid">	
-	  <div class="col image-1"></div>
-      <div class="col image-2"></div>
-      <div class="col image-3"></div>
-      <div class="col image-4"></div>
-      <div class="col image-5"></div>
-      <div class="col image-6"></div>
-	</div> -->
+    <div class="grid">	
+      <div class="col"><img class="images" src="assets/grid_02.jpg"/><p class="text">Lorem ipsum</p></div>
+      <div class="col"><img class="images" src="assets/grid_04.jpg"/><p class="text">Lorem ipsum</p></div>
+      <div class="col"><img class="images" src="assets/grid_06.jpg"/><p class="text">Lorem ipsum</p></div>
+      <div class="col"><img class="images" src="assets/grid_07.jpg"/><p class="text">Lorem ipsum</p></div>
+      <div class="col"><img class="images" src="assets/grid_08.jpg"/><p class="text">Lorem ipsum</p></div>
+      <div class="col"><img class="images" src="assets/grid_09.jpg"/><p class="text">Lorem ipsum</p></div>
+	</div>
 
-    <div class="row" id="link4">
+    <!-- <div class="row" id="link4">
       <div class="col-flex image-1"></div>
       <div class="col-flex image-2"></div>
       <div class="col-flex image-3"></div>
-    </div>
+     </div> 
     <div class="row">
       <div class="col-flex image-4"></div>
       <div class="col-flex image-5"></div>
       <div class="col-flex image-6"></div>
-    </div>
+    </div> -->
 
     <div class="register">
       <form>
@@ -161,7 +191,7 @@
           <li>Copyright</li>
         </ul>
       </div>
-      <div class="footer-col">
+      <div class="footer-col ">
         <ul class="footer-menu">
           <li>About us</li>
           <li>Provacy policy</li>
@@ -189,15 +219,15 @@
   </body>
 
   <script>
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
       } else {
-        document.getElementById("navbar").style.top = "-50px";
+        x.className = "topnav";
       }
-      prevScrollpos = currentScrollPos;
-    };
-  </script>
+    }
+    </script>
+  
 </html>

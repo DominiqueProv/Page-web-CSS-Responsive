@@ -20,11 +20,12 @@ body {
   background-repeat: none;
   background-size: cover;
   padding: 150px 15% 100px;
-  position: relative;
+  /* position: relative; */
 }
 
 .logo {
-  width: 200px;
+  /* display: block; */
+  width: 175px;
   z-index: 11;
   position: fixed;
   top: 12px;
@@ -45,7 +46,7 @@ h3 {
 }
 
 
-.navigation {
+/* .navigation {
   list-style: none;
   margin: 0;
   background-color: rgba(31, 5, 5, 0.308);
@@ -71,20 +72,6 @@ h3 {
 .navigation a:hover {
   background: black;
 }
-
-/* .navbar {
-	overflow: hidden;
-	background-color: #333;
-  }
-  
-  .navbar a {
-	float: left;
-	font-size: 16px;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-  } */
 
 .dropdown {
   float: left;
@@ -132,11 +119,16 @@ h3 {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
+} */
 
 
 
 @media screen and (max-width: 1000px) {
+
+  .grid{
+    grid-template-columns: repeat( 2, 1fr) !important;
+    grid-template-rows: repeat( 3, 1fr) !important;
+  }
   
   .intro {
 
@@ -179,11 +171,18 @@ h3 {
 
 
 @media screen and (max-width: 700px) {
-  .navigation {
+  
+  .grid{
+    grid-template-columns: 1fr !important;
+    background-color: black !important;
+  }
+  
+  
+  /* .navigation {
     -webkit-flex-flow: column wrap;
     flex-flow: column wrap;
     padding: 0px;
-  }
+  } */
 
 .mainContent{
   display: block !important;
@@ -218,9 +217,9 @@ h3 {
   
 }
 
-.navigation a{
+/* .navigation a{
   display: none;
-}
+} */
 
 .dropbtn{
   display: none;
@@ -240,6 +239,19 @@ h3 {
   text-align: left !important;
   padding-left: 40px;
 }
+
+.footer{
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+}
+
+.footer>div{
+  width: 50% !important;
+  padding: 30px;
+  box-sizing: border-box;
+
+}
+
 
 }
 
@@ -400,23 +412,37 @@ h3 {
   padding-right: 40px;
 }
 
-/* .grid {
- display: grid;
- grid-template-columns: 1fr 1fr 1fr;
- overflow: hidden;
-  } */
+.grid {
+  display: grid;
+  grid-template-columns: repeat( 3, 1fr);
+  grid-template-rows: repeat( 2, 1fr);
+  background-color: black;
+  } 
 
-/* .col{
-	display: inline-grid;
-	background-size: cover;
-	background-color: grey;
-	padding: 150px;
-  	font-size: 30px;
-	background-position: center;
 
-  } */
+  .images{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: all 2s;
+    overflow: hidden;
 
-/* col a {
+    
+  }
+
+  .images:hover{
+   transform: scale(1.2);
+   opacity: .5;
+
+  }
+
+  .col{
+    overflow: hidden;
+    position: relative;
+  }
+
+ /* .col a {
     display: none;
     font-size: 35px;
     color: #ffffff !important;
@@ -433,27 +459,58 @@ h3 {
     text-decoration: none;
 } */
 
-.row {
+.text{
+  display: block;
+  position: absolute;
+  top: 43%;
+  left: 43%;
+  opacity: 0;
+  /* margin: auto 0; */
+  text-align: center;
+  color: white;
+  transition-duration: .4s;
+  font-size: 1.2em;
+}
+
+.text:hover, .col:hover > .text{
+  opacity: 1;
+  transition-duration: .4s;
+  cursor: pointer;
+}
+
+
+
+/* .row {
   display: flex;
+  flex-wrap: wrap;
+
   flex: 1;
   overflow: hidden;
   height: 300px;
+  box-sizing: border-box;
 }
 
 .col-flex {
-  background-size: cover;
+  background-size: 100%;
   font-size: 30px;
   background-position: center;
   flex: 1;
-  transition: all 0.5s ease;
+  transition: all .7s;
+  background-repeat: no-repeat;
+  width: 100%;
+  
 }
 
-/* .col-flex:hover{
-	transform: scale(1.2);
+.col-flex:hover{
+  transition: all 1s;
+    background-size: 110%;
 
   } */
 
-.image-1 {
+
+
+
+/* .image-1 {
   background-image: url(../assets/grid_02.jpg);
 }
 
@@ -475,7 +532,7 @@ h3 {
 
 .image-6 {
   background-image: url(../assets/grid_09.jpg);
-}
+} */
 
 .register {
   margin: 0 auto;
@@ -515,7 +572,7 @@ input[type="email"] {
 .footer {
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  /* width: 100%; */
   margin-bottom: 40px;
   border-top: 1px dotted gray;
   padding-top: 30px;
@@ -530,6 +587,7 @@ input[type="email"] {
 
 .footer-menu li:hover {
   color: indigo;
+  cursor: pointer;
 }
 
 
